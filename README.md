@@ -22,15 +22,14 @@ Transfer/sec:    331.25KB
 ```
 
 Real load:
-**wrk -t10 -c200 -d40s http://localhost:8080/fruits**
+**wrk -t50 -c200 -d30s http://localhost:8080/fruits**
 ```
-Running 40s test @ http://localhost:8080/fruits
-  10 threads and 200 connections
+Running 30s test @ http://localhost:8080/fruits
+  50 threads and 200 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    51.88ms   13.09ms 166.99ms   91.89%
-    Req/Sec   387.18     19.77   525.00     73.85%
-  154367 requests in 40.06s, 12.95MB read
-  Socket errors: connect 0, read 14, write 0, timeout 0
-Requests/sec:   3853.69
-Transfer/sec:    331.18KB
+    Latency    52.46ms   13.18ms 153.69ms   91.84%
+    Req/Sec    76.34      9.59   121.00     75.15%
+  114568 requests in 30.10s, 9.61MB read
+Requests/sec:   3806.52
+Transfer/sec:    327.12KB
 ```
